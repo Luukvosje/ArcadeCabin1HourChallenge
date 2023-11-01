@@ -2905,6 +2905,7 @@ MonoBehaviour:
   - Assault
   - Shotgun
   - Pistols
+  realWeapons: []
   Helmet1: 114
   Chestplate1: 304
   Weapon1: 32

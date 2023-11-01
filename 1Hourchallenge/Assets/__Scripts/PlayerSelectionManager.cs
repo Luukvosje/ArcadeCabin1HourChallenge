@@ -9,6 +9,7 @@ public class PlayerSelectionManager : MonoBehaviour
     public List<Armor> helmets = new List<Armor>();
     public List<Armor> chestplates = new List<Armor>();
     public List<string> weapons = new List<string>();
+    public List<GameObject> realWeapons = new List<GameObject>();
 
 
     [Header("Player1Keys")]
@@ -66,8 +67,11 @@ public class PlayerSelectionManager : MonoBehaviour
     {
         if (!canSwitch1 && !canSwitch2)
         {
+            Debug.Log("TEST");
             SceneManager.LoadScene(0);
+
         }
+
         if (canSwitch1)
         {
             if (Input.GetKeyDown(Helmet1))
@@ -95,7 +99,7 @@ public class PlayerSelectionManager : MonoBehaviour
             player1.ChestPlate = chestplates[currentChestplateIndex1];
             player1.AssignArmor();
             readyScreen1.SetActive(true);
-            player1.gun = currentWeaponIndex1;
+            player1.gun = realWeapons[currentWeaponIndex1];
         }
 
         if (canSwitch2)
@@ -120,12 +124,13 @@ public class PlayerSelectionManager : MonoBehaviour
         }
         if (Input.GetKeyDown(Ready2))
         {
-            canSwitch1 = false;
+            canSwitch2 = false;
             player2.Helmet = helmets[currentChestplateIndex2];
             player2.ChestPlate = chestplates[currentChestplateIndex2];
             player2.AssignArmor();
             readyScreen2.SetActive(true);
-            player2.gun = currentWeaponIndex2;
+            player2.gun = realWeapons[currentWeaponIndex2];
+
         }
 
 
