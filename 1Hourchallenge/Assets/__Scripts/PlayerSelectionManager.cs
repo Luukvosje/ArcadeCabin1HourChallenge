@@ -64,6 +64,10 @@ public class PlayerSelectionManager : MonoBehaviour
 
     private void Update()
     {
+        if (!canSwitch1 && !canSwitch2)
+        {
+            SceneManager.LoadScene(0);
+        }
         if (canSwitch1)
         {
             if (Input.GetKeyDown(Helmet1))
@@ -124,9 +128,6 @@ public class PlayerSelectionManager : MonoBehaviour
             player2.gun = currentWeaponIndex2;
         }
 
-        if (!canSwitch1 && !canSwitch2)
-        {
-            SceneManager.LoadScene(0);
-        }
+
     }
 }
