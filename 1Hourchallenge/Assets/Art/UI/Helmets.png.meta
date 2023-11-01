@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2bfead65b6995aa499445530ab449ca4
+guid: 0597728f41c2d4949b20bd0ec13edb9d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WeaponsV01_0
+      name: Helmets_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d76d9e5c29907141986970da4f65762
-      internalID: -57335083
+      spriteID: 70c07c9d0ec1b274a9dec83d0e452798
+      internalID: -1335928895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WeaponsV01_1
+      name: Helmets_1
       rect:
         serializedVersion: 2
         x: 32
@@ -140,29 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f15cf46194b495439380c710a579bfa
-      internalID: 1227985242
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WeaponsV01_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e19391c73a7a98409ad5e7e74a1a65a
-      internalID: 1157515377
+      spriteID: 653fba3674b144e4ca80c97e18203211
+      internalID: -87239340
       vertices: []
       indices: 
       edges: []
@@ -178,9 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WeaponsV01_0: -57335083
-      WeaponsV01_1: 1227985242
-      WeaponsV01_2: 1157515377
+      Helmets_0: -1335928895
+      Helmets_1: -87239340
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

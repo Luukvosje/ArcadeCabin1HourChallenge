@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2bfead65b6995aa499445530ab449ca4
+guid: 999c3b824daaf184db372481776f7d81
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WeaponsV01_0
+      name: ChestPlates_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d76d9e5c29907141986970da4f65762
-      internalID: -57335083
+      spriteID: f2ea82fb828533045ac72e7c8324e2f7
+      internalID: 108890714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WeaponsV01_1
+      name: ChestPlates_1
       rect:
         serializedVersion: 2
         x: 32
@@ -140,29 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f15cf46194b495439380c710a579bfa
-      internalID: 1227985242
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WeaponsV01_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e19391c73a7a98409ad5e7e74a1a65a
-      internalID: 1157515377
+      spriteID: 78f46a28276a95c40ac1c558de91516c
+      internalID: 846428892
       vertices: []
       indices: 
       edges: []
@@ -178,9 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WeaponsV01_0: -57335083
-      WeaponsV01_1: 1227985242
-      WeaponsV01_2: 1157515377
+      ChestPlates_0: 108890714
+      ChestPlates_1: 846428892
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
