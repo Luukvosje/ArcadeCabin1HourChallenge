@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -51,10 +52,10 @@ public class PlayerHandler : MonoBehaviour
     public TextMeshProUGUI livesText;
 
 
-
     private float maxVelocity = 5f;
     private float turnSpeed = 7f;
     private Rigidbody2D rb;
+    private bool matchEnded;
 
     //assigns the components
     private void Awake()
@@ -72,8 +73,18 @@ public class PlayerHandler : MonoBehaviour
 
     private void Update()
     {
-        Movement();
-        Shooting();
+        if (!GameManager.Instance.MatchEnded)
+        {
+            Movement();
+            Shooting();
+        }
+        else if (GameManager.Instance.MatchEnded)
+        {
+            if (Input.GetKey(Shoot))
+            {
+                SceneManager.LoadScene(0);
+            }
+        }
     }
 
     //Handles the movement
@@ -108,14 +119,14 @@ public class PlayerHandler : MonoBehaviour
 
     private void Move(Vector2 inputDirection)
     {
-        Vector2 force = inputDirection.normalized * moveSpeed * Time.fixedDeltaTime;
+        Vector2 force = inputDirection.normalized * (moveSpeed * 10) * Time.deltaTime;
         rb.AddForce(force, ForceMode2D.Impulse);
     }
     private void Rotate(Vector2 inputDirection)
     {
         float targetAngle = Mathf.Atan2(inputDirection.y, inputDirection.x) * Mathf.Rad2Deg;
         Quaternion targetRotation = Quaternion.Euler(0, 0, targetAngle);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.fixedDeltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
     }
 
     #endregion
@@ -227,10 +238,18 @@ public class PlayerHandler : MonoBehaviour
                     healthImage.fillAmount = 1;
                     if (player._Lives <= 0)
                     {
-                        SceneManager.LoadScene(0);
+                        StartCoroutine(winScreen());
+                        GameManager.Instance.WinScren();
+
                     }
                 }
             }
         }
+    }
+
+    IEnumerator winScreen()
+    {
+        yield return new WaitForSeconds(1.5f);
+        GameManager.Instance.MatchEnded = true;
     }
 }
