@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01ed00f33e5594344b70082554911f6e, type: 3}
+  m_Name: AssaultRifle
+  m_EditorClassIdentifier: 
+  name: Assault
+  gunDamage: 15
+  bulletSpeed: 1.5
+  fireSpeed: 0.2
+  inGameSprite: {fileID: -420247597, guid: 2925eee54f9e91745a38de6e180481c3, type: 3}
+  shootPoints:
+  - {x: 0.85, y: -0.4}
+  shootPointAngle:
+  - 0

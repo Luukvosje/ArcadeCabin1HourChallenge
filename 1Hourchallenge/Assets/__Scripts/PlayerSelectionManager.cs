@@ -8,18 +8,16 @@ public class PlayerSelectionManager : MonoBehaviour
 {
     public List<Armor> helmets = new List<Armor>();
     public List<Armor> chestplates = new List<Armor>();
-    public List<string> weapons = new List<string>();
-    public List<GameObject> realWeapons = new List<GameObject>();
+    public List<Gun> weapons = new List<Gun>();
 
 
     [Header("Player1Keys")]
+
     [SerializeField] private KeyCode Helmet1;
     [SerializeField] private KeyCode Chestplate1;
     [SerializeField] private KeyCode Weapon1;
     [SerializeField] private KeyCode Ready1;
 
-
-    //public List<Sprite> bootSprites1 = new List<Sprite>();
 
     public Image helmetSprite;
     public Image chestplateSprite;
@@ -36,6 +34,7 @@ public class PlayerSelectionManager : MonoBehaviour
     bool canSwitch1 = true;
 
     [Header("Player2Keys")]
+
     [SerializeField] private KeyCode Helmet2;
     [SerializeField] private KeyCode Chestplate2;
     [SerializeField] private KeyCode Weapon2;
@@ -68,7 +67,7 @@ public class PlayerSelectionManager : MonoBehaviour
         if (!canSwitch1 && !canSwitch2)
         {
             Debug.Log("TEST");
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(2);
 
         }
 
@@ -78,28 +77,35 @@ public class PlayerSelectionManager : MonoBehaviour
             {
                 currentHelmetIndex1 = (currentHelmetIndex1 + 1) % helmets.Count;
                 helmetSprite.sprite = helmets[currentHelmetIndex1].Sprite;
-                helmetSprite.color = new Color(255, 255, 255, 255);
+                if (helmets[currentHelmetIndex1].Sprite != null)
+                    helmetSprite.color = new Color(255, 255, 255, 255);
+                else
+                    helmetSprite.color = new Color(255, 255, 255, 0);
             }
             else if (Input.GetKeyDown(Chestplate1))
             {
                 currentChestplateIndex1 = (currentChestplateIndex1 + 1) % chestplates.Count;
                 chestplateSprite.sprite = chestplates[currentChestplateIndex1].Sprite;
-                chestplateSprite.color = new Color(255, 255, 255, 255);
+                if (chestplates[currentChestplateIndex1].Sprite != null)
+                    chestplateSprite.color = new Color(255, 255, 255, 255);
+                else
+                    chestplateSprite.color = new Color(255, 255, 255, 0);
             }
             else if (Input.GetKeyDown(Weapon1))
             {
                 currentWeaponIndex1 = (currentWeaponIndex1 + 1) % weapons.Count;
-                WeaponText1.text = weapons[currentWeaponIndex1];
+                WeaponText1.text = weapons[currentWeaponIndex1].name;
             }
         }
         if (Input.GetKeyDown(Ready1))
         {
             canSwitch1 = false;
-            player1.Helmet = helmets[currentChestplateIndex1];
+            player1.Helmet = helmets[currentHelmetIndex1];
             player1.ChestPlate = chestplates[currentChestplateIndex1];
+            player1.weapon = weapons[currentWeaponIndex1];
             player1.AssignArmor();
             readyScreen1.SetActive(true);
-            player1.gun = realWeapons[currentWeaponIndex1];
+            player1.weapon = weapons[currentWeaponIndex1];
         }
 
         if (canSwitch2)
@@ -108,28 +114,34 @@ public class PlayerSelectionManager : MonoBehaviour
             {
                 currentHelmetIndex2 = (currentHelmetIndex2 + 1) % helmets.Count;
                 helmetSprite2.sprite = helmets[currentHelmetIndex2].Sprite;
-                helmetSprite2.color = new Color(255, 255, 255, 255);
+                if (helmets[currentHelmetIndex2].Sprite != null)
+                    helmetSprite2.color = new Color(255, 255, 255, 255);
+                else
+                    helmetSprite2.color = new Color(255, 255, 255, 0);
             }
             else if (Input.GetKeyDown(Chestplate2))
             {
                 currentChestplateIndex2 = (currentChestplateIndex2 + 1) % chestplates.Count;
                 chestplateSprite2.sprite = chestplates[currentChestplateIndex2].Sprite;
-                chestplateSprite2.color = new Color(255, 255, 255, 255);
+                if (chestplates[currentChestplateIndex2].Sprite != null)
+                    chestplateSprite2.color = new Color(255, 255, 255, 255);
+                else
+                    chestplateSprite2.color = new Color(255, 255, 255, 0);
             }
             else if (Input.GetKeyDown(Weapon2))
             {
                 currentWeaponIndex2 = (currentWeaponIndex2 + 1) % weapons.Count;
-                WeaponText2.text = weapons[currentWeaponIndex2];
+                WeaponText2.text = weapons[currentWeaponIndex2].name;
             }
         }
         if (Input.GetKeyDown(Ready2))
         {
             canSwitch2 = false;
-            player2.Helmet = helmets[currentChestplateIndex2];
+            player2.Helmet = helmets[currentHelmetIndex2];
             player2.ChestPlate = chestplates[currentChestplateIndex2];
             player2.AssignArmor();
             readyScreen2.SetActive(true);
-            player2.gun = realWeapons[currentWeaponIndex2];
+            player2.weapon = weapons[currentWeaponIndex2];
 
         }
 

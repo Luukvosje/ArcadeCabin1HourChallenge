@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d76d9e5c29907141986970da4f65762
-      internalID: -57335083
+      spriteID: 40d9b80bc4afcc24f81efe706e3808c9
+      internalID: 307806157
       vertices: []
       indices: 
       edges: []
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f15cf46194b495439380c710a579bfa
-      internalID: 1227985242
+      spriteID: 2a124e8242ae0f24dba16f17a106f464
+      internalID: 817636709
       vertices: []
       indices: 
       edges: []
@@ -161,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e19391c73a7a98409ad5e7e74a1a65a
-      internalID: 1157515377
+      spriteID: 86cf36da7f84be7459f2165560166be9
+      internalID: -750645656
       vertices: []
       indices: 
       edges: []
@@ -178,9 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WeaponsV01_0: -57335083
-      WeaponsV01_1: 1227985242
-      WeaponsV01_2: 1157515377
+      WeaponsV01_0: 307806157
+      WeaponsV01_1: 817636709
+      WeaponsV01_2: -750645656
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8cdbfe5640069c4ebc8e5d4651deb9f, type: 3}
+  m_Name: Player1
+  m_EditorClassIdentifier: 
+  _Health: 115
+  _Speed: 100
+  _Lives: 0
+  Helmet: {fileID: 11400000, guid: 9bd1bd8e55d80a544bdc1bb17684f43c, type: 2}
+  ChestPlate: {fileID: 11400000, guid: 1ae9061bb50e6f74ba333dab2be2b571, type: 2}
+  weapon: {fileID: 11400000, guid: 37ff078ff448f0c48ac241523db380ed, type: 2}

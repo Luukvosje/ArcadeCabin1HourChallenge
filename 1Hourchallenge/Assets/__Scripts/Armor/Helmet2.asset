@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b22174bc476ac614e88e1ab7895eeee3, type: 3}
   m_Name: Helmet2
   m_EditorClassIdentifier: 
-  _Damage: 0
-  _Health: 0
-  Speed: 0
-  Sprite: {fileID: -87239340, guid: 0597728f41c2d4949b20bd0ec13edb9d, type: 3}
+  _Health: 5
+  _Speed: 25
+  Sprite: {fileID: 46661748, guid: 29a80f7343886f441b555e67d0bed59d, type: 3}
+  inGameSprite: {fileID: 680992193, guid: 2564eabdd42fa6d4bbf4c7fdedac973b, type: 3}
