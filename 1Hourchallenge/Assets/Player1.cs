@@ -98,7 +98,7 @@ public class Player1 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            Debug.Log("hit");
+           
         }
     }
  
